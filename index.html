@@ -2,50 +2,723 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Tailwind CDN -->
+    <title>Deib Portfolio</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Flowbite -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="text-white bg-slate-950">
 
-    <!-- Navbar -->
-    <nav class="border-gray-700 bg-gray-800">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="text-2xl font-bold">
-                My Portfolio
-            </a>
-        </div>
-    </nav>
+    <!-- LEFT STEPPER -->
+    <div class="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-50">
 
-    <!-- Hero Section -->
-    <section class="h-screen flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-5xl font-bold mb-4">
-                Hello, I'm Aki
-            </h1>
+        <ol class="flex flex-col gap-8 text-sm font-medium">
 
-            <p class="text-gray-300 text-lg">
-                IT Student • Developer • Designer
-            </p>
+            <li class="step-item active-step">
 
-            <button class="mt-6 px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">
-                View Projects
-            </button>
-        </div>
-    </section>
+                <a href="#home" class="flex items-center group">
 
-    <!-- Flowbite JS -->
+                    <span class="step-circle">
+
+                        <i class="fa-solid fa-house text-sm"></i>
+
+                    </span>
+
+                    <span class="ms-4 hidden md:block">
+
+                        <span class="step-title">
+                            Home
+                        </span>
+
+                    </span>
+
+                </a>
+
+            </li>
+
+            <li class="step-item">
+
+                <a href="#projects" class="flex items-center group">
+
+                    <span class="step-circle">
+
+                        <i class="fa-solid fa-code text-sm"></i>
+
+                    </span>
+
+                    <span class="ms-4 hidden md:block">
+
+                        <span class="step-title">
+                            Projects
+                        </span>
+
+                    </span>
+
+                </a>
+
+            </li>
+
+            <li class="step-item">
+
+                <a href="#certificates" class="flex items-center group">
+
+                    <span class="step-circle">
+
+                        <i class="fa-solid fa-award text-sm"></i>
+
+                    </span>
+
+                    <span class="ms-4 hidden md:block">
+
+                        <span class="step-title">
+                            Certificates
+                        </span>
+
+                    </span>
+
+                </a>
+
+            </li>
+
+        </ol>
+
+    </div>
+
+    <!-- MAIN -->
+    <main class="h-screen overflow-y-auto scroll-smooth">
+
+        <!-- HERO -->
+        <section id="home" class="min-h-screen flex items-center justify-center px-6 py-20">
+
+            <div class="max-w-7xl w-full grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- LEFT -->
+                <div>
+
+                    <span class="glass px-4 py-2 rounded-full text-cyan-400 text-sm fade-up">
+
+                        IT Student • Developer • Problem Solver
+
+                    </span>
+
+                    <h1 class="text-5xl md:text-7xl font-bold mt-8 leading-tight fade-up delay-1">
+
+                        Hi, I'm
+
+                        <span class="gradient-text">
+                            Elton Deib
+                        </span>
+
+                    </h1>
+
+                    <p class="text-gray-300 text-lg mt-8 leading-relaxed max-w-xl fade-up delay-2">
+
+                        Aspiring IT professional passionate about developing
+                        systems, solving real-world problems, and creating
+                        modern web experiences.
+
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mt-10 fade-up delay-3">
+
+                        <a href="#projects"
+                            class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-2xl font-semibold">
+
+                            Explore My Work
+
+                        </a>
+
+                    </div>
+
+                    <!-- TECH STACK -->
+                    <div class="flex flex-wrap gap-4 mt-10">
+
+                        <!-- HTML -->
+                        <div class="glass px-5 py-3 rounded-xl flex items-center gap-3">
+
+                            <i class="fa-brands fa-html5 text-[#E34F26] text-xl"></i>
+
+                            <span>HTML</span>
+
+                        </div>
+
+                        <!-- CSS -->
+                        <div class="glass px-5 py-3 rounded-xl flex items-center gap-3">
+
+                            <i class="fa-brands fa-css3-alt text-[#1572B6] text-xl"></i>
+
+                            <span>CSS</span>
+
+                        </div>
+
+                        <!-- Tailwind -->
+                        <div class="glass px-5 py-3 rounded-xl flex items-center gap-3">
+
+                            <i class="fa-solid fa-wind text-cyan-400 text-xl"></i>
+
+                            <span>Tailwind</span>
+
+                        </div>
+
+                        <!-- Figma -->
+                        <div class="glass px-5 py-3 rounded-xl flex items-center gap-3">
+
+                            <i class="fa-brands fa-figma text-pink-400 text-xl"></i>
+
+                            <span>Figma</span>
+
+                        </div>
+
+                        <!-- Laravel -->
+                        <div class="glass px-5 py-3 rounded-xl flex items-center gap-3">
+
+                            <i class="fa-brands fa-laravel text-red-500 text-xl"></i>
+
+                            <span>Laravel</span>
+
+                        </div>
+
+                        <!-- ASP.NET -->
+                        <div class="glass px-5 py-3 rounded-xl flex items-center gap-3">
+
+                            <i class="fa-solid fa-code text-blue-400 text-xl"></i>
+
+                            <span>ASP.NET</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+                <div class="flex justify-center">
+
+                    <img src="assets/images/me.jpg"
+                        class="w-full max-w-sm md:max-w-md rounded-3xl object-cover shadow-2xl glow">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="min-h-screen flex items-center px-6 py-20">
+
+            <div class="max-w-7xl mx-auto w-full">
+
+                <div class="mb-14">
+
+                    <h2 class="text-5xl md:text-6xl font-bold gradient-text">
+
+                        Projects
+
+                    </h2>
+
+                    <p class="text-gray-400 mt-4 text-lg">
+
+                        Systems and applications I developed.
+
+                    </p>
+
+                </div>
+
+                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+                    <!-- CARD -->
+                    <div class="glass rounded-3xl overflow-hidden glow">
+
+                        <img src="assets/images/project1.png" class="h-60 w-full object-cover">
+
+                        <div class="p-6">
+
+                            <h3 class="text-2xl font-bold">
+
+                                Dapit Himlay
+
+                            </h3>
+
+                            <p class="text-gray-400 mt-4">
+
+                                A grave locator system for Davao Memorial Park
+                                with search and map integration.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="glass rounded-3xl overflow-hidden glow">
+
+                        <img src="assets/images/project2.png" class="h-60 w-full object-cover">
+
+                        <div class="p-6">
+
+                            <h3 class="text-2xl font-bold">
+
+                                DAVCOM Inventory System
+
+                            </h3>
+
+                            <p class="text-gray-400 mt-4">
+
+                                Inventory management with product tracking,
+                                sales monitoring, and reports.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="glass rounded-3xl overflow-hidden glow">
+
+                        <img src="assets/images/project3.png" class="h-60 w-full object-cover">
+
+                        <div class="p-6">
+
+                            <h3 class="text-2xl font-bold">
+
+                                SundoGo Ride-Hailing
+
+                            </h3>
+
+                            <p class="text-gray-400 mt-4">
+
+                                Ride-booking platform with fare calculation
+                                and booking management.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section id="certificates" class="min-h-screen flex items-center px-6 py-20">
+
+            <div class="max-w-7xl mx-auto w-full">
+
+                <!-- HEADER -->
+                <div class="mb-14">
+
+                    <h2 class="text-5xl md:text-6xl font-bold gradient-text">
+
+                        Certificates
+
+                    </h2>
+
+                    <p class="text-gray-400 mt-4 text-lg">
+
+                        Seminars, workshops, and achievements.
+
+                    </p>
+
+                </div>
+
+                <!-- FLOWBITE CAROUSEL -->
+                <div id="default-carousel" class="relative w-full" data-carousel="static">
+
+                    <!-- CAROUSEL WRAPPER -->
+                    <div class="relative h-[500px] overflow-hidden rounded-3xl">
+
+                        <!-- SLIDE 1 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+                                <!-- CERTIFICATE CARD -->
+                                <a href="assets/certificates/Cert_Java.pdf" target="_blank"
+                                    class="glass rounded-3xl overflow-hidden glow block group">
+
+                                    <!-- IMAGE -->
+                                    <div class="relative overflow-hidden">
+
+                                        <img src="assets/certificates/java.png" alt="Certificate"
+                                            class="h-56 w-full object-cover transition duration-500 group-hover:scale-105">
+
+                                        <!-- OVERLAY -->
+                                        <div class="absolute inset-0 bg-black/40 opacity-0
+                                        group-hover:opacity-100 transition flex items-center justify-center">
+
+                                            <div class="glass px-5 py-3 rounded-xl">
+
+                                                <i class="fa-solid fa-expand me-2"></i>
+
+                                                View Certificate
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CONTENT -->
+                                    <div class="p-6">
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            Java Certificate
+
+                                        </h3>
+
+                                        <p class="text-gray-400 mt-3">
+
+                                            Passed Java programming test.
+
+                                        </p>
+
+                                        <div class="mt-5 flex items-center gap-2 text-cyan-400 text-sm">
+
+                                            <i class="fa-solid fa-file-pdf"></i>
+
+                                            PDF Certificate
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="assets/certificates/Cert_Database.pdf" target="_blank"
+                                    class="glass rounded-3xl overflow-hidden glow block group">
+
+                                    <!-- IMAGE -->
+                                    <div class="relative overflow-hidden">
+
+                                        <img src="assets/certificates/database.png" alt="Certificate"
+                                            class="h-56 w-full object-cover transition duration-500 group-hover:scale-105">
+
+                                        <!-- OVERLAY -->
+                                        <div
+                                            class="absolute inset-0 bg-black/40 opacity-0
+                                                            group-hover:opacity-100 transition flex items-center justify-center">
+
+                                            <div class="glass px-5 py-3 rounded-xl">
+
+                                                <i class="fa-solid fa-expand me-2"></i>
+
+                                                View Certificate
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CONTENT -->
+                                    <div class="p-6">
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            Databases Certificate
+
+                                        </h3>
+
+                                        <p class="text-gray-400 mt-3">
+
+                                            Passed Database test.
+
+                                        </p>
+
+                                        <div class="mt-5 flex items-center gap-2 text-cyan-400 text-sm">
+
+                                            <i class="fa-solid fa-file-pdf"></i>
+
+                                            PDF Certificate
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="assets/certificates/Cert_Html&Css.pdf" target="_blank"
+                                    class="glass rounded-3xl overflow-hidden glow block group">
+
+                                    <!-- IMAGE -->
+                                    <div class="relative overflow-hidden">
+
+                                        <img src="assets/certificates/HTMLCSS.png" alt="Certificate"
+                                            class="h-56 w-full object-cover transition duration-500 group-hover:scale-105">
+
+                                        <!-- OVERLAY -->
+                                        <div
+                                            class="absolute inset-0 bg-black/40 opacity-0
+                                                                                            group-hover:opacity-100 transition flex items-center justify-center">
+
+                                            <div class="glass px-5 py-3 rounded-xl">
+
+                                                <i class="fa-solid fa-expand me-2"></i>
+
+                                                View Certificate
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CONTENT -->
+                                    <div class="p-6">
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            HTML & CSS Certificate
+
+                                        </h3>
+
+                                        <p class="text-gray-400 mt-3">
+
+                                            Passed HTML & CSS programming test.
+
+                                        </p>
+
+                                        <div class="mt-5 flex items-center gap-2 text-cyan-400 text-sm">
+
+                                            <i class="fa-solid fa-file-pdf"></i>
+
+                                            PDF Certificate
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="assets/certificates/Cert_NetworkSecurity.pdf" target="_blank"
+                                    class="glass rounded-3xl overflow-hidden glow block group">
+
+                                    <!-- IMAGE -->
+                                    <div class="relative overflow-hidden">
+
+                                        <img src="assets/certificates/NetworkSecurity.png" alt="Certificate"
+                                            class="h-56 w-full object-cover transition duration-500 group-hover:scale-105">
+
+                                        <!-- OVERLAY -->
+                                        <div
+                                            class="absolute inset-0 bg-black/40 opacity-0
+                                                                                                                            group-hover:opacity-100 transition flex items-center justify-center">
+
+                                            <div class="glass px-5 py-3 rounded-xl">
+
+                                                <i class="fa-solid fa-expand me-2"></i>
+
+                                                View Certificate
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CONTENT -->
+                                    <div class="p-6">
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            Network Security Certificate
+
+                                        </h3>
+
+                                        <p class="text-gray-400 mt-3">
+
+                                            Passed Network Security test.
+
+                                        </p>
+
+                                        <div class="mt-5 flex items-center gap-2 text-cyan-400 text-sm">
+
+                                            <i class="fa-solid fa-file-pdf"></i>
+
+                                            PDF Certificate
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+                                <a href="assets/certificates/Cert_Cybersecurity.pdf" target="_blank"
+                                    class="glass rounded-3xl overflow-hidden glow block group">
+
+                                    <!-- IMAGE -->
+                                    <div class="relative overflow-hidden">
+
+                                        <img src="assets/certificates/Cybersecurity.png" alt="Certificate"
+                                            class="h-56 w-full object-cover transition duration-500 group-hover:scale-105">
+
+                                        <!-- OVERLAY -->
+                                        <div class="absolute inset-0 bg-black/40 opacity-0
+                                            group-hover:opacity-100 transition flex items-center justify-center">
+
+                                            <div class="glass px-5 py-3 rounded-xl">
+
+                                                <i class="fa-solid fa-expand me-2"></i>
+
+                                                View Certificate
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CONTENT -->
+                                    <div class="p-6">
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            Cybersecurity Certificate
+
+                                        </h3>
+
+                                        <p class="text-gray-400 mt-3">
+
+                                            Passed Cybersecurity test.
+
+                                        </p>
+
+                                        <div class="mt-5 flex items-center gap-2 text-cyan-400 text-sm">
+
+                                            <i class="fa-solid fa-file-pdf"></i>
+
+                                            PDF Certificate
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                                <a href="assets/certificates/CCE_Certificate.pdf" target="_blank"
+                                    class="glass rounded-3xl overflow-hidden glow block group">
+
+                                    <!-- IMAGE -->
+                                    <div class="relative overflow-hidden">
+
+                                        <img src="assets/certificates/CCE_Certificate.png" alt="Certificate"
+                                            class="h-56 w-full object-cover transition duration-500 group-hover:scale-105">
+
+                                        <!-- OVERLAY -->
+                                        <div
+                                            class="absolute inset-0 bg-black/40 opacity-0
+                                                                            group-hover:opacity-100 transition flex items-center justify-center">
+
+                                            <div class="glass px-5 py-3 rounded-xl">
+
+                                                <i class="fa-solid fa-expand me-2"></i>
+
+                                                View Certificate
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CONTENT -->
+                                    <div class="p-6">
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            Git and GitHub Workshop • JavaScript Workshop Certificate
+
+                                        </h3>
+
+                                        <p class="text-gray-400 mt-3">
+
+                                            Participated in Git and GitHub Workshop and JavaScript Workshop.
+
+                                        </p>
+
+                                        <div class="mt-5 flex items-center gap-2 text-cyan-400 text-sm">
+
+                                            <i class="fa-solid fa-file-pdf"></i>
+
+                                            PDF Certificate
+
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- SLIDER CONTROLS -->
+                        <button type="button"
+                            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-prev>
+
+                            <span class="glass w-12 h-12 rounded-full flex items-center justify-center">
+
+                                <i class="fa-solid fa-chevron-left"></i>
+
+                            </span>
+
+                        </button>
+
+                        <button type="button"
+                            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-next>
+
+                            <span class="glass w-12 h-12 rounded-full flex items-center justify-center">
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+        </section>
+
+    </main>
+
+    <!-- FLOWBITE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

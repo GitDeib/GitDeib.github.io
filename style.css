@@ -1,0 +1,139 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #020617;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #38bdf8, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: .2s;
+}
+
+.delay-2 {
+    animation-delay: .4s;
+}
+
+.delay-3 {
+    animation-delay: .6s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skeleton {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+
+.glow:hover {
+    box-shadow: 0 0 30px rgba(56, 189, 248, .35);
+    transform: translateY(-5px);
+    transition: .3s;
+}
+
+
+/* STEP ITEMS */
+.step-item {
+    position: relative;
+}
+
+/* LINE */
+.step-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 48px;
+    width: 2px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* CIRCLE */
+.step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    color: #94a3b8;
+    transition: .3s;
+}
+
+/* TITLE */
+.step-title {
+    color: #94a3b8;
+    transition: .3s;
+}
+
+/* HOVER */
+.step-item:hover .step-circle {
+    border-color: #38bdf8;
+    color: #38bdf8;
+    transform: scale(1.1);
+    box-shadow:
+        0 0 20px rgba(56, 189, 248, .45);
+}
+
+.step-item:hover .step-title {
+    color: white;
+}
+
+/* ACTIVE */
+.active-step .step-circle {
+    background: rgba(56, 189, 248, .12);
+    border-color: #38bdf8;
+    color: #38bdf8;
+
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, .45),
+        inset 0 0 10px rgba(56, 189, 248, .15);
+}
+
+.active-step .step-title {
+    color: white;
+}
