@@ -4,25 +4,30 @@ html {
 
 body {
     background: #020617;
-    overflow: hidden;
+    overflow-x: hidden;
+    color: white;
 }
 
+/* HIDE SCROLLBAR */
 ::-webkit-scrollbar {
     width: 0;
 }
 
+/* GLASS EFFECT */
 .glass {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* GRADIENT TEXT */
 .gradient-text {
     background: linear-gradient(to right, #38bdf8, #8b5cf6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/* FADE ANIMATION */
 .fade-up {
     opacity: 0;
     transform: translateY(40px);
@@ -48,37 +53,22 @@ body {
     }
 }
 
-.skeleton {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        opacity: .5;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: .5;
-    }
+/* GLOW HOVER */
+.glow {
+    transition: .3s ease;
 }
 
 .glow:hover {
     box-shadow: 0 0 30px rgba(56, 189, 248, .35);
     transform: translateY(-5px);
-    transition: .3s;
 }
-
 
 /* STEP ITEMS */
 .step-item {
     position: relative;
 }
 
-/* LINE */
+/* STEP LINE */
 .step-item:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -89,7 +79,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* CIRCLE */
+/* STEP CIRCLE */
 .step-circle {
     width: 40px;
     height: 40px;
@@ -97,24 +87,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
     border: 1px solid rgba(255, 255, 255, 0.1);
+
     background: rgba(255, 255, 255, 0.04);
+
     backdrop-filter: blur(10px);
+
     color: #94a3b8;
+
     transition: .3s;
 }
 
-/* TITLE */
+/* STEP TITLE */
 .step-title {
     color: #94a3b8;
     transition: .3s;
 }
 
-/* HOVER */
+/* STEP HOVER */
 .step-item:hover .step-circle {
     border-color: #38bdf8;
     color: #38bdf8;
+
     transform: scale(1.1);
+
     box-shadow:
         0 0 20px rgba(56, 189, 248, .45);
 }
@@ -123,10 +120,12 @@ body {
     color: white;
 }
 
-/* ACTIVE */
+/* ACTIVE STEP */
 .active-step .step-circle {
     background: rgba(56, 189, 248, .12);
+
     border-color: #38bdf8;
+
     color: #38bdf8;
 
     box-shadow:
@@ -136,4 +135,13 @@ body {
 
 .active-step .step-title {
     color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .step-item::after {
+        display: none;
+    }
+
 }
